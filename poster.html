@@ -136,20 +136,20 @@
   .svc{
     border:1px solid var(--line);border-radius:13px;padding:6mm;background:#fff;
   }
-  .svc--dark{ background:var(--charcoal); color:var(--cream); border-color:transparent; }
+  .svc--dark{ background:#FFF3CC; color:var(--ink); border:1px solid var(--yellow); border-top:4px solid var(--yellow); }
   .svc__ic{ font-size:24px; margin-bottom:8px; }
   .svc h3{ font-size:15px; margin-bottom:8px; }
-  .svc--dark h3{ color:var(--cream); }
+  .svc--dark h3{ color:var(--ink); }
   .svc ul{ list-style:none; display:flex; flex-direction:column; gap:6px; }
   .svc li{ font-size:11px; display:flex; gap:7px; align-items:flex-start; line-height:1.4; }
-  .svc--dark li{ color:rgba(251,243,226,.85); }
+  .svc--dark li{ color:var(--ink); }
   .svc li .b{ color:var(--red); font-weight:800; }
-  .svc--dark li .b{ color:var(--yellow); }
+  .svc--dark li .b{ color:var(--red); }
   .svc__tag{
     display:inline-block;margin-top:9px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
     color:var(--red-deep);background:rgba(215,56,43,.12);padding:5px 10px;border-radius:999px;
   }
-  .svc--dark .svc__tag{ color:var(--yellow); background:rgba(248,197,24,.16); }
+  .svc--dark .svc__tag{ color:var(--red-deep); background:rgba(215,56,43,.12); }
 
   .plan{ margin-bottom:7mm; }
   .plan h2{ font-size:18px; margin-bottom:5mm; }
@@ -168,31 +168,38 @@
 
   .measure{
     display:grid;grid-template-columns:1.1fr auto 1fr;gap:5mm;align-items:center;
-    background:var(--charcoal);border-radius:14px;padding:6mm;color:var(--cream);margin-bottom:6mm;
+    background:#FFF3CC;border:1px solid var(--yellow);border-radius:14px;padding:6mm;color:var(--ink);margin-bottom:6mm;
   }
   .mside{text-align:center;}
-  .mside .lab{font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(251,243,226,.6);margin-bottom:6px;}
+  .mside .lab{font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
   .mside.real .lab{color:#fff;background:var(--red);display:inline-block;padding:4px 10px;border-radius:999px;}
   .mrow{margin:5px 0;}
   .mrow b{font-family:'Archivo';font-weight:900;font-size:24px;line-height:1;display:block;}
-  .vanity .mrow b{color:rgba(251,243,226,.45);}
-  .real .mrow b{color:var(--yellow);}
-  .mrow span{font-size:9.5px;opacity:.78;}
-  .mvs{font-family:'Archivo';font-weight:800;color:var(--yellow);font-size:14px;}
+  .vanity .mrow b{color:rgba(28,26,23,.32);}
+  .real .mrow b{color:var(--red);}
+  .mrow span{font-size:9.5px;color:var(--muted);}
+  .mvs{font-family:'Archivo';font-weight:800;color:var(--red);font-size:14px;}
   .codes{margin-top:4mm;text-align:center;}
-  .codes .cintro{font-size:10px;color:rgba(251,243,226,.72);margin-bottom:6px;}
+  .codes .cintro{font-size:10px;color:var(--muted);margin-bottom:6px;}
   .chip{
     font-family:'Archivo';font-weight:800;letter-spacing:.12em;font-size:11px;color:var(--charcoal);
-    background:var(--yellow);padding:6px 14px;border-radius:8px;margin:0 4px;display:inline-block;
+    background:var(--yellow);border:1px solid rgba(28,26,23,.18);padding:6px 14px;border-radius:8px;margin:0 4px;display:inline-block;
   }
 
   .impact{ display:grid; grid-template-columns:repeat(4,1fr); gap:4mm; margin-bottom:6mm; }
-  .icard{ border:1px solid var(--line);border-radius:12px;padding:5mm 3mm;text-align:center;background:#fff; }
-  .icard b{ font-family:'Archivo';font-weight:900;font-size:26px;color:var(--red);line-height:1;display:block; }
+  .icard{
+    border:1px solid var(--yellow);border-top:5px solid var(--yellow);border-radius:12px;
+    padding:6mm 3mm 5mm;text-align:center;background:#FFF3CC;
+  }
+  .icard .out{
+    display:block;font-size:8.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--red-deep);margin-bottom:6px;
+  }
+  .icard b{ font-family:'Archivo';font-weight:900;font-size:34px;color:var(--red);line-height:1;display:block; }
   .icard b small{ font-size:.5em;vertical-align:super; }
-  .icard span{ font-size:9.5px;color:var(--ink);font-weight:600;display:block;margin-top:5px;line-height:1.2; }
-  .icard.soft{ background:var(--yellow); }
-  .icard.soft b{ color:var(--charcoal);font-size:22px; }
+  .icard span{ font-size:10px;color:var(--charcoal);font-weight:700;display:block;margin-top:6px;line-height:1.2; }
+  .icard.soft{ background:var(--yellow);border-color:var(--red);border-top-color:var(--red); }
+  .icard.soft b{ color:var(--red);font-size:30px; }
 
   .cta{
     background:var(--red);color:#fff;border-radius:14px;padding:6mm 7mm;
@@ -355,10 +362,10 @@
     </div>
 
     <div class="impact">
-      <div class="icard"><b>+15<small>%</small></b><span>Peak-Hour Transactions</span></div>
-      <div class="icard"><b>+10<small>%</small></b><span>Average Order Value</span></div>
-      <div class="icard"><b>+15<small>%</small></b><span>Repeat Visits</span></div>
-      <div class="icard soft"><b>✓</b><span>Improved Marketing Attribution</span></div>
+      <div class="icard"><span class="out">Projected Outcome</span><b>+15<small>%</small></b><span>Peak-Hour Transactions</span></div>
+      <div class="icard"><span class="out">Projected Outcome</span><b>+10<small>%</small></b><span>Average Order Value</span></div>
+      <div class="icard"><span class="out">Projected Outcome</span><b>+15<small>%</small></b><span>Repeat Visits</span></div>
+      <div class="icard soft"><span class="out">Projected Outcome</span><b>✓</b><span>Improved Marketing Attribution</span></div>
     </div>
 
     <div class="cta">
