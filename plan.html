@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Simbongsa — Marketing Execution Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --yellow:#F8C518; --yellow-soft:#FFF3CC; --red:#D7382B; --red-deep:#A81F16;
+    --cream:#FBF3E2; --charcoal:#1C1A17; --ink:#2B2823; --muted:#6E675E;
+    --line:rgba(28,26,23,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @page{ size:A4; margin:16mm 15mm; }
+  body{
+    font-family:'Inter',system-ui,sans-serif; color:var(--ink); font-size:10.5pt; line-height:1.5;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  h1,h2,h3{ font-family:'Archivo',sans-serif; letter-spacing:-.01em; }
+
+  /* Cover header */
+  .cover{ border-radius:14px; overflow:hidden; margin-bottom:14pt; break-inside:avoid; }
+  .cover__top{ background:var(--charcoal); color:var(--cream); padding:20pt 22pt 16pt; }
+  .badge{
+    display:inline-block; background:var(--yellow); color:var(--charcoal);
+    font-family:'Archivo'; font-weight:900; font-size:13pt; padding:5pt 12pt; border-radius:8pt; margin-bottom:12pt;
+  }
+  .cover__eyebrow{ font-family:'Archivo'; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:8.5pt; color:var(--yellow); margin-bottom:6pt; }
+  .cover h1{ font-size:26pt; font-weight:900; line-height:1.02; color:#fff; }
+  .cover h1 .hl{ color:var(--yellow); }
+  .cover__meta{ background:var(--yellow-soft); padding:10pt 22pt; display:flex; flex-wrap:wrap; gap:4pt 26pt; font-size:9pt; }
+  .cover__meta b{ font-family:'Archivo'; color:var(--red-deep); }
+
+  h2{
+    font-size:14pt; font-weight:800; color:var(--charcoal); margin:16pt 0 8pt;
+    padding-bottom:5pt; border-bottom:2px solid var(--yellow); break-after:avoid;
+  }
+  h2 .n{ color:var(--red); }
+  h3{ font-size:11pt; font-weight:800; color:var(--red-deep); margin:11pt 0 4pt; break-after:avoid; }
+  p{ margin:0 0 7pt; }
+  .lead{ font-size:11pt; }
+  strong{ color:var(--charcoal); }
+
+  ul,ol{ margin:0 0 8pt 16pt; }
+  li{ margin-bottom:3.5pt; }
+
+  table{ width:100%; border-collapse:collapse; margin:4pt 0 10pt; font-size:9.5pt; break-inside:avoid; }
+  th,td{ text-align:left; padding:6pt 9pt; border:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--yellow-soft); font-family:'Archivo'; font-weight:800; color:var(--charcoal); }
+  tr:nth-child(even) td{ background:#FCFAF4; }
+
+  .callout{
+    background:var(--yellow-soft); border:1px solid var(--yellow); border-left:5px solid var(--yellow);
+    border-radius:10px; padding:9pt 13pt; margin:8pt 0; break-inside:avoid;
+  }
+  .callout--red{ background:rgba(215,56,43,.07); border-color:rgba(215,56,43,.4); border-left-color:var(--red); }
+  .codes{ font-family:'Archivo'; font-weight:800; letter-spacing:.06em; }
+  .chip{
+    display:inline-block; background:var(--yellow); border:1px solid rgba(28,26,23,.18);
+    color:var(--charcoal); font-family:'Archivo'; font-weight:800; font-size:9pt;
+    padding:3pt 9pt; border-radius:6pt; margin-right:5pt;
+  }
+  .checklist{ list-style:none; margin-left:0; }
+  .checklist li{ padding-left:20pt; position:relative; }
+  .checklist li::before{ content:'☐'; position:absolute; left:0; color:var(--red); font-size:11pt; line-height:1; }
+
+  .week{ break-inside:avoid; border:1px solid var(--line); border-radius:11px; padding:11pt 14pt; margin-bottom:9pt; }
+  .week__tag{
+    display:inline-block; background:var(--red); color:#fff; font-family:'Archivo'; font-weight:800;
+    font-size:8.5pt; letter-spacing:.04em; text-transform:uppercase; padding:3pt 10pt; border-radius:999px; margin-bottom:6pt;
+  }
+  .week h3{ margin:0 0 5pt; color:var(--charcoal); font-size:11.5pt; }
+  .week .kpi{ font-size:9pt; color:var(--red-deep); font-weight:600; }
+
+  .footer-note{ margin-top:14pt; padding-top:8pt; border-top:1px solid var(--line); font-size:8.5pt; color:var(--muted); }
+  .bottomline{ background:var(--charcoal); color:var(--cream); border-radius:12px; padding:14pt 18pt; break-inside:avoid; }
+  .bottomline h2{ color:#fff; border:0; margin:0 0 6pt; }
+  .bottomline .journey{ font-family:'Archivo'; font-weight:900; font-size:13pt; margin-top:8pt; }
+  .bottomline .journey .mark{ color:var(--yellow); }
+  .avoid{ break-inside:avoid; }
+</style>
+</head>
+<body>
+
+  <div class="cover">
+    <div class="cover__top">
+      <span class="badge">심봉사도로께</span>
+      <div class="cover__eyebrow">Marketing Execution Plan</div>
+      <h1>The Post-Practice <span class="hl">Tradition</span></h1>
+    </div>
+    <div class="cover__meta">
+      <span><b>Duration</b> 8 weeks (compressible to 6)</span>
+      <span><b>Goal</b> Convert the sports-park audience already passing the door</span>
+      <span><b>Prepared for</b> The owner of Simbongsa</span>
+    </div>
+  </div>
+
+  <h2><span class="n">1.</span> The one-line strategy</h2>
+  <p class="lead">Simbongsa isn't competing with other Korean restaurants — it's competing with families driving <strong>straight home</strong> after practice. The audience is already nearby, already hungry, and already has a reason to stop. <strong>The job is conversion, not awareness.</strong></p>
+  <p>Everything below is built to turn "we drove past it" into "we always stop there after practice."</p>
+
+  <h3>The three offers — the engine</h3>
+  <table>
+    <tr><th style="width:22%">Offer</th><th style="width:44%">What it is</th><th>Job it does</th></tr>
+    <tr><td><strong>Practice Day Special</strong></td><td>A small bonus item for guests in a sports uniform / practice attire</td><td>Builds the <strong>habit</strong> and rewards the exact moment we want to own</td></tr>
+    <tr><td><strong>Family Bundles</strong></td><td>Family-sized combinations priced as a set</td><td>Lifts <strong>average order value</strong></td></tr>
+    <tr><td><strong>First-Time Favorites</strong></td><td>A "not sure what to get?" starter guide at the counter + online</td><td>Removes hesitation → converts first-timers</td></tr>
+  </table>
+
+  <h3>The three tracking codes — how we prove it worked</h3>
+  <div class="callout">
+    <span class="chip">STORY</span><span class="chip">PRACTICE</span><span class="chip">CREATOR</span>
+    <p style="margin:7pt 0 0">Every offer and post carries one, so each real visit ties back to the marketing that drove it. <strong>Likes don't equal sales; redeemed codes do.</strong></p>
+  </div>
+
+  <h2><span class="n">2.</span> Success metrics</h2>
+  <table>
+    <tr><th>Metric</th><th style="width:34%">Target by end of campaign</th></tr>
+    <tr><td>Peak-hour (post-practice) transactions</td><td><strong>+15%</strong></td></tr>
+    <tr><td>Average order value</td><td><strong>+10%</strong></td></tr>
+    <tr><td>Repeat visits</td><td><strong>+15%</strong></td></tr>
+    <tr><td>Marketing attribution</td><td>Every campaign traceable to redeemed codes</td></tr>
+  </table>
+  <p><strong>Leading indicators (watch weekly):</strong> code redemptions, bundle attach rate, % of transactions in the 4–7pm post-practice window, new-vs-returning mix, content saves/shares (not just likes).</p>
+
+  <h2><span class="n">3.</span> Roles &amp; tools</h2>
+  <ul>
+    <li><strong>Owner / manager:</strong> approves offers, briefs staff, reviews the weekly numbers.</li>
+    <li><strong>Counter staff:</strong> apply the Practice Day bonus, record the code at checkout, hand out First-Time Favorites cards.</li>
+    <li><strong>Content lead:</strong> shoots and posts content, runs the calendar, compiles the weekly report.</li>
+    <li><strong>Tools:</strong> POS with a coupon button per code (or a tally sheet), Instagram, a printed First-Time Favorites card, one shared log spreadsheet.</li>
+  </ul>
+  <div class="callout callout--red"><strong>Zero-budget path:</strong> phone camera + Instagram + tally sheet + printed cards. Paid boosts are optional and only introduced once we know which posts convert (Week 5+).</div>
+
+  <h2><span class="n">4.</span> Week 0 — Setup (the 3–5 days before launch)</h2>
+  <p>Do not launch until these are done. This week is what makes the results <em>measurable</em>.</p>
+  <ul class="checklist">
+    <li>Finalize the <strong>Practice Day Special</strong> bonus item (low-cost, high-perceived-value).</li>
+    <li>Define the <strong>3 launch Family Bundles</strong> with set pricing and names.</li>
+    <li>Write and print the <strong>First-Time Favorites</strong> card: "New here? Start with these 3." Pin it on Instagram too.</li>
+    <li>Set up <strong>tracking codes</strong> in the POS (or tally sheet): STORY, PRACTICE, CREATOR.</li>
+    <li>Create the <strong>weekly log spreadsheet</strong> (date, transactions, post-practice count, redemptions by code, bundles sold, new/returning).</li>
+    <li><strong>Brief counter staff</strong> on applying the bonus and logging the code.</li>
+    <li>Shoot a <strong>batch of 5–7 content pieces</strong> so Week 1 isn't scrambling.</li>
+    <li>Record a <strong>baseline</strong>: current peak-hour transactions, AOV, and repeat rate.</li>
+  </ul>
+
+  <h2><span class="n">5.</span> The content system (runs all 8 weeks)</h2>
+  <p><strong>Cadence:</strong> 4–5 posts/week + daily stories. Post the conversion content <strong>on practice days, 1–2 hours before pickup/dinner.</strong></p>
+  <h3>Recurring formats (rotate)</h3>
+  <ul>
+    <li>🏆 <strong>Best Post-Practice Order</strong> — the go-to after a game.</li>
+    <li>🧒 <strong>Kid Favorite of the Week</strong> — kids drive the snack decision.</li>
+    <li>📖 <strong>First-Time Customer Guide</strong> — what to order if you've never had Korean street food.</li>
+    <li>🎽 <strong>Practice Day Special</strong> — reminder of today's bonus, with the PRACTICE code.</li>
+  </ul>
+  <div class="callout"><strong>Rule:</strong> every post ends with a reason to <em>walk in</em> — a code, a time, or a "stop by after practice today" — not just a reason to like.</div>
+
+  <h2><span class="n">6.</span> Week-by-week execution</h2>
+
+  <div class="week">
+    <span class="week__tag">Weeks 1–2</span>
+    <h3>Launch the Practice Day Special</h3>
+    <p><strong>Focus:</strong> Start the habit; get the measurement loop running.</p>
+    <ul>
+      <li>Launch the bonus for guests in practice attire; announce with the PRACTICE code.</li>
+      <li>Post Practice Day Special + Best Post-Practice Order formats heavily.</li>
+      <li>Staff log every code redemption from day one.</li>
+      <li><strong>Checkpoint (end of Wk 2):</strong> Are codes being redeemed and logged? Fix the loop before adding complexity.</li>
+    </ul>
+    <p class="kpi">KPI focus: code redemptions · post-practice-window transaction count.</p>
+  </div>
+
+  <div class="week">
+    <span class="week__tag">Weeks 3–4</span>
+    <h3>Launch Family Bundles</h3>
+    <p><strong>Focus:</strong> Lift average order value.</p>
+    <ul>
+      <li>Introduce the 3 bundles; feature them in content and at the counter.</li>
+      <li>Content shifts to bundle storytelling + Kid Favorite of the Week.</li>
+      <li>Train staff to <em>offer the bundle</em> at the point of sale.</li>
+    </ul>
+    <p class="kpi">KPI focus: bundle attach rate · average order value vs baseline.</p>
+  </div>
+
+  <div class="week">
+    <span class="week__tag">Weeks 5–6</span>
+    <h3>Expand what's working</h3>
+    <p><strong>Focus:</strong> Double down; stop guessing.</p>
+    <ul>
+      <li>Pull the numbers: which posts drove redemptions? Which bundle sells? Which code performs?</li>
+      <li>Reallocate effort to the top formats; retire what isn't converting.</li>
+      <li>Deploy STORY / CREATOR codes deliberately (e.g. a local sports-parent creator collab or a story-only offer).</li>
+      <li>Optional first <strong>small paid boost</strong> behind the single best post.</li>
+    </ul>
+    <p class="kpi">KPI focus: cost-per-redemption by channel · repeat-visit signals.</p>
+  </div>
+
+  <div class="week">
+    <span class="week__tag">Weeks 7–8</span>
+    <h3>Optimize on data</h3>
+    <p><strong>Focus:</strong> Lock in the tradition; decide what continues.</p>
+    <ul>
+      <li>Refine offers, timing, and bundle mix using 6 weeks of tracked results.</li>
+      <li>Formalize the winning weekly rhythm as the post-campaign "new normal."</li>
+      <li>Build the <strong>wrap report</strong>: lift vs baseline on all four metrics, best content, best offer, keep/kill list.</li>
+    </ul>
+    <p class="kpi">KPI focus: the four headline targets (+15% peak-hour, +10% AOV, +15% repeat, attribution live).</p>
+  </div>
+
+  <h2><span class="n">7.</span> The weekly rhythm</h2>
+  <ol>
+    <li><strong>Mon:</strong> Plan the week's posts around practice/game days; prep any offer.</li>
+    <li><strong>Tue–Sat:</strong> Post on cadence; staff log codes at checkout.</li>
+    <li><strong>Sun (15 min):</strong> Update the log, review leading indicators, note one thing to change.</li>
+  </ol>
+  <div class="callout">The loop is the whole system: <strong>post → offer → redeem → log → adjust.</strong></div>
+
+  <h2><span class="n">8.</span> Compressing to 6 weeks</h2>
+  <ul>
+    <li><strong>Weeks 1–2:</strong> Practice Day Special <strong>+</strong> Family Bundles together (heavier Week 0 prep).</li>
+    <li><strong>Weeks 3–4:</strong> Expand best content + introduce STORY / CREATOR.</li>
+    <li><strong>Weeks 5–6:</strong> Optimize on data + wrap report.</li>
+  </ul>
+  <p><strong>Trade-off:</strong> less time to clean up the measurement loop before adding the bundle — so Week 0 setup and staff briefing matter even more.</p>
+
+  <h2><span class="n">9.</span> Risks &amp; adjustments</h2>
+  <table>
+    <tr><th>Risk</th><th>Signal</th><th>Adjustment</th></tr>
+    <tr><td>Codes not being logged</td><td>Redemptions implausibly low</td><td>Re-brief staff; simplify to one tally sheet</td></tr>
+    <tr><td>Bonus item too costly</td><td>Margin dips</td><td>Swap to a lower-cost bonus of equal perceived value</td></tr>
+    <tr><td>Likes, not visits</td><td>High views, flat redemptions</td><td>Rewrite CTAs to time + code; post closer to pickup</td></tr>
+    <tr><td>One offer outperforms</td><td>Skewed redemptions</td><td>Reallocate — don't keep funding the loser for "balance"</td></tr>
+  </table>
+
+  <div class="bottomline">
+    <h2>Bottom line</h2>
+    <p style="color:rgba(251,243,226,.9)">Simbongsa already has the <strong style="color:#fff">location</strong>, the <strong style="color:#fff">customers</strong>, and the <strong style="color:#fff">product</strong>. This plan adds the missing piece: a repeatable, measurable reason for families to stop after every practice — and the tracking to prove it works.</p>
+    <div class="journey">Practice → <span class="mark">심봉사도로께</span> → Home</div>
+  </div>
+
+  <div class="footer-note">Simbongsa · Marketing Execution Plan · The Post-Practice Tradition · Prepared for the owner of Simbongsa</div>
+
+</body>
+</html>
